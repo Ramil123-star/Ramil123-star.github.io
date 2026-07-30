@@ -1,0 +1,3324 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Ramil Jay B. Matabye | Personal Portfolio
+</title>
+
+<!-- GOOGLE FONT -->
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =====================================================
+   GENERAL SETTINGS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    --primary: #38bdf8;
+
+    --secondary: #2563eb;
+
+    --dark: #07111f;
+
+    --dark2: #0d1b2a;
+
+    --card: #111d2e;
+
+    --text: #f8fafc;
+
+    --muted: #94a3b8;
+
+    --border: rgba(255,255,255,0.1);
+
+}
+
+
+body {
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    background:
+
+    radial-gradient(
+        circle at top right,
+        rgba(37,99,235,0.2),
+        transparent 35%
+    ),
+
+    var(--dark);
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    transition: 0.4s;
+
+}
+
+
+/* LIGHT MODE */
+
+body.light {
+
+    --dark: #f1f5f9;
+
+    --dark2: #e2e8f0;
+
+    --card: #ffffff;
+
+    --text: #0f172a;
+
+    --muted: #475569;
+
+    --border: rgba(0,0,0,0.1);
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+
+    rgba(7,17,31,0.9);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+
+    1px solid var(--border);
+
+}
+
+
+.navbar {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    color: var(--primary);
+
+}
+
+
+.logo span {
+
+    color: white;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 15px;
+
+    list-style: none;
+
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--primary);
+
+}
+
+
+.nav-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+
+.nav-buttons button {
+
+    background: none;
+
+    border: none;
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+}
+
+
+.menu-btn {
+
+    display: none;
+
+}
+
+
+/* =====================================================
+   PAGE SECTIONS
+===================================================== */
+
+main {
+
+    padding-top: 75px;
+
+}
+
+
+.page {
+
+    min-height: 100vh;
+
+    padding: 100px 5%;
+
+    display: none;
+
+}
+
+
+.page.active {
+
+    display: block;
+
+    animation: fadeIn 0.6s ease;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+.container {
+
+    max-width: 1150px;
+
+    width: 100%;
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   HOME
+===================================================== */
+
+.home {
+
+    min-height:
+
+    calc(100vh - 75px);
+
+    display: grid;
+
+    grid-template-columns:
+
+    1.2fr 0.8fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+}
+
+
+.hero-label {
+
+    color: var(--primary);
+
+    letter-spacing: 3px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.home h1 {
+
+    font-size: 55px;
+
+    line-height: 1.2;
+
+    margin: 20px 0;
+
+}
+
+
+.home h1 span {
+
+    color: var(--primary);
+
+}
+
+
+.home h2 {
+
+    color: var(--muted);
+
+    margin-bottom: 20px;
+
+}
+
+
+.home p {
+
+    color: var(--muted);
+
+}
+
+
+.profile-container {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.profile-ring {
+
+    width: 350px;
+
+    height: 350px;
+
+    padding: 8px;
+
+    border-radius: 50%;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--secondary)
+
+    );
+
+    animation: floating 4s infinite ease-in-out;
+
+}
+
+
+.profile-ring img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid var(--dark);
+
+}
+
+
+@keyframes floating {
+
+    0%,100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-15px);
+
+    }
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.btn:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+.primary {
+
+    background: var(--primary);
+
+    color: #06111f;
+
+}
+
+
+.secondary {
+
+    border: 1px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =====================================================
+   PAGE TITLE
+===================================================== */
+
+.page-title {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+
+.page-title h1 {
+
+    font-size: 48px;
+
+}
+
+
+.page-title h1 span {
+
+    color: var(--primary);
+
+}
+
+
+.page-title p {
+
+    color: var(--muted);
+
+    max-width: 650px;
+
+    margin: 15px auto;
+
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns:
+
+    1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+}
+
+
+.about-grid img {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    border-radius: 25px;
+
+}
+
+
+.about-text h2 {
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.about-text p {
+
+    color: var(--muted);
+
+    margin-bottom: 15px;
+
+}
+
+
+.info-box {
+
+    background: var(--card);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border:
+
+    1px solid var(--border);
+
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card-grid {
+
+    display: grid;
+
+    grid-template-columns:
+
+    repeat(
+
+        auto-fit,
+
+        minmax(240px,1fr)
+
+    );
+
+    gap: 25px;
+
+}
+
+
+.card {
+
+    background: var(--card);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border:
+
+    1px solid var(--border);
+
+    transition: 0.3s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--primary);
+
+}
+
+
+.card-icon {
+
+    font-size: 45px;
+
+    color: var(--primary);
+
+    margin-bottom: 20px;
+
+}
+
+
+.card h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.card p {
+
+    color: var(--muted);
+
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.timeline-item {
+
+    background: var(--card);
+
+    border-left:
+
+    4px solid var(--primary);
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius:
+
+    0 15px 15px 0;
+
+}
+
+
+.timeline-item h3 {
+
+    color: var(--primary);
+
+}
+
+
+.timeline-item p {
+
+    color: var(--muted);
+
+}
+
+
+/* =====================================================
+   NOTES
+===================================================== */
+
+.notes-box {
+
+    background: var(--card);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border:
+
+    1px solid var(--border);
+
+}
+
+
+.notes-form input,
+
+.notes-form textarea,
+
+.notes-form select {
+
+    width: 100%;
+
+    margin-bottom: 15px;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border:
+
+    1px solid var(--border);
+
+    background: var(--dark);
+
+    color: var(--text);
+
+}
+
+
+.notes-form textarea {
+
+    height: 150px;
+
+    resize: none;
+
+}
+
+
+.note-list {
+
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+
+    repeat(
+
+        auto-fit,
+
+        minmax(250px,1fr)
+
+    );
+
+    gap: 20px;
+
+}
+
+
+.note {
+
+    background: var(--dark2);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+}
+
+
+.note h3 {
+
+    color: var(--primary);
+
+}
+
+
+.note p {
+
+    color: var(--muted);
+
+}
+
+
+/* =====================================================
+   SECRET VAULT
+===================================================== */
+
+.secret-box {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    background: var(--card);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border:
+
+    1px solid var(--border);
+
+}
+
+
+.secret-content {
+
+    display: none;
+
+    margin-top: 30px;
+
+}
+
+
+.secret-content.show {
+
+    display: block;
+
+}
+
+
+.secret-input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin: 20px 0;
+
+    border-radius: 10px;
+
+    border:
+
+    1px solid var(--border);
+
+    background: var(--dark);
+
+    color: var(--text);
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-form {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background: var(--card);
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+}
+
+
+.contact-form input,
+
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 15px;
+
+    background: var(--dark);
+
+    color: var(--text);
+
+    border:
+
+    1px solid var(--border);
+
+    border-radius: 10px;
+
+}
+
+
+.contact-form textarea {
+
+    height: 150px;
+
+    resize: none;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 40px;
+
+    border-top:
+
+    1px solid var(--border);
+
+    color: var(--muted);
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:950px) {
+
+
+    .nav-links {
+
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        background: var(--dark);
+
+        padding: 25px;
+
+        text-align: center;
+
+    }
+
+
+    .nav-links.active {
+
+        display: flex;
+
+    }
+
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+
+    .home {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 60px 0;
+
+    }
+
+
+    .profile-container {
+
+        order: -1;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+}
+
+
+@media(max-width:600px) {
+
+
+    .home h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .page-title h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .profile-ring {
+
+        width: 270px;
+
+        height: 270px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+
+<a class="logo"
+onclick="showPage('home')"
+style="cursor:pointer">
+
+RJM<span>.</span>
+
+</a>
+
+
+<ul class="nav-links"
+id="navLinks">
+
+
+<li>
+<a onclick="showPage('home')">
+Home
+</a>
+</li>
+
+
+<li>
+<a onclick="showPage('about')">
+About
+</a>
+</li>
+
+
+<li>
+<a onclick="showPage('sports')">
+Sports
+</a>
+</li>
+
+
+<li>
+<a onclick="showPage('hobbies')">
+Hobbies
+</a>
+</li>
+
+
+<li>
+<a onclick="showPage('achievements')">
+Achievements
+</a>
+</li>
+
+
+<li>
+<a onclick="showPage('experience')">
+Experience
+</a>
+</li>
+
+
+<li>
+<a onclick="showPage('notes')">
+Study Notes
+</a>
+</li>
+
+
+<li>
+<a onclick="showPage('documents')">
+Documents
+</a>
+</li>
+
+
+<li>
+<a onclick="showPage('secret')">
+Secret
+</a>
+</li>
+
+
+<li>
+<a onclick="showPage('contact')">
+Contact
+</a>
+</li>
+
+
+</ul>
+
+
+<div class="nav-buttons">
+
+
+<button
+onclick="toggleTheme()">
+
+<i class="fas fa-moon"></i>
+
+</button>
+
+
+<button
+class="menu-btn"
+onclick="toggleMenu()">
+
+<i class="fas fa-bars"></i>
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
+
+<section
+id="home"
+class="page active">
+
+
+<div class="container home">
+
+
+<div>
+
+
+<p class="hero-label">
+
+WELCOME TO MY PERSONAL WEBSITE
+
+</p>
+
+
+<h1>
+
+Hello, I'm
+
+<br>
+
+<span>
+Ramil Jay B. Matabye
+</span>
+
+</h1>
+
+
+<h2>
+
+BS Criminology Student
+
+</h2>
+
+
+<p>
+
+I am a student at the
+University of the Cordilleras,
+currently pursuing a Bachelor
+of Science in Criminology.
+
+This website serves as my
+personal portfolio and digital
+study center.
+
+</p>
+
+
+<div class="hero-buttons">
+
+
+<button
+class="btn primary"
+onclick="showPage('about')">
+
+<i class="fas fa-user"></i>
+
+About Me
+
+</button>
+
+
+<button
+class="btn secondary"
+onclick="showPage('notes')">
+
+<i class="fas fa-book"></i>
+
+My Study Notes
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+<div class="profile-container">
+
+
+<div class="profile-ring">
+
+
+<!-- PUT YOUR PROFILE IMAGE HERE -->
+
+<img
+src="profile.jpg"
+alt="Ramil Jay B. Matabye">
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT PAGE
+===================================================== -->
+
+<section
+id="about"
+class="page">
+
+
+<div class="container">
+
+
+<div class="page-title">
+
+
+<h1>
+
+About <span>Me</span>
+
+</h1>
+
+
+<p>
+
+Learn more about my background,
+education, interests, and goals.
+
+</p>
+
+
+</div>
+
+
+<div class="about-grid">
+
+
+<div>
+
+
+<img
+src="profile.jpg"
+alt="Ramil Jay B. Matabye">
+
+</div>
+
+
+<div class="about-text">
+
+
+<h2>
+
+Hello! I'm Ramil Jay.
+
+</h2>
+
+
+<p>
+
+My name is Ramil Jay B. Matabye.
+I am currently studying at the
+University of the Cordilleras.
+
+</p>
+
+
+<p>
+
+I am pursuing a Bachelor of
+Science in Criminology and
+developing my knowledge and
+skills in criminology, public
+safety, and related fields.
+
+</p>
+
+
+<p>
+
+Outside academics, I enjoy
+watching movies, reading books,
+listening to music, and playing
+different sports.
+
+</p>
+
+
+<div class="info-box">
+
+
+<p>
+<strong>School:</strong>
+University of the Cordilleras
+</p>
+
+
+<p>
+<strong>Course:</strong>
+Bachelor of Science in Criminology
+</p>
+
+
+<p>
+<strong>Experience:</strong>
+Basic Life Support
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     SPORTS PAGE
+===================================================== -->
+
+<section
+id="sports"
+class="page">
+
+
+<div class="container">
+
+
+<div class="page-title">
+
+
+<h1>
+
+My <span>Sports</span>
+
+</h1>
+
+
+<p>
+
+Sports help me stay active,
+focused, disciplined, and healthy.
+
+</p>
+
+
+</div>
+
+
+<div class="card-grid">
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-basketball-ball"></i>
+
+</div>
+
+
+<h3>
+
+Basketball
+
+</h3>
+
+
+<p>
+
+Basketball is one of my favorite
+sports. It helps me develop
+teamwork, discipline,
+communication, and physical
+fitness.
+
+</p>
+
+
+</div>
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-chess"></i>
+
+</div>
+
+
+<h3>
+
+Chess
+
+</h3>
+
+
+<p>
+
+Chess helps me improve my
+strategic thinking, patience,
+concentration, and decision-making
+skills.
+
+</p>
+
+
+</div>
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-table-tennis"></i>
+
+</div>
+
+
+<h3>
+
+Badminton
+
+</h3>
+
+
+<p>
+
+Badminton is a sport I enjoy
+for physical activity,
+recreation, and maintaining
+an active lifestyle.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     HOBBIES PAGE
+===================================================== -->
+
+<section
+id="hobbies"
+class="page">
+
+
+<div class="container">
+
+
+<div class="page-title">
+
+
+<h1>
+
+My <span>Hobbies</span>
+
+</h1>
+
+
+<p>
+
+Activities I enjoy during my
+free time and for relaxation.
+
+</p>
+
+
+</div>
+
+
+<div class="card-grid">
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-film"></i>
+
+</div>
+
+
+<h3>
+
+Watching Movies
+
+</h3>
+
+
+<p>
+
+I enjoy watching movies during
+my free time. It helps me relax
+and explore different stories,
+characters, and perspectives.
+
+</p>
+
+
+</div>
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-book-open"></i>
+
+</div>
+
+
+<h3>
+
+Reading Books
+
+</h3>
+
+
+<p>
+
+Reading allows me to gain new
+knowledge, improve my understanding,
+and discover interesting ideas.
+
+</p>
+
+
+</div>
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-music"></i>
+
+</div>
+
+
+<h3>
+
+Listening to Music
+
+</h3>
+
+
+<p>
+
+Music helps me relax, clear my
+mind, and maintain focus while
+studying or taking a break.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ACHIEVEMENTS PAGE
+===================================================== -->
+
+<section
+id="achievements"
+class="page">
+
+
+<div class="container">
+
+
+<div class="page-title">
+
+
+<h1>
+
+My <span>Achievements</span>
+
+</h1>
+
+
+<p>
+
+A space for my academic,
+personal, and extracurricular
+achievements.
+
+</p>
+
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+
+<h3>
+
+Bachelor of Science in Criminology Student
+
+</h3>
+
+
+<p>
+
+Currently pursuing my Bachelor
+of Science in Criminology at the
+University of the Cordilleras.
+
+</p>
+
+
+</div>
+
+
+<div class="timeline-item">
+
+
+<h3>
+
+Basic Life Support Training
+
+</h3>
+
+
+<p>
+
+Completed or gained experience
+in Basic Life Support training.
+You can add your certificate
+and training details here.
+
+</p>
+
+
+</div>
+
+
+<div class="timeline-item">
+
+
+<h3>
+
+Future Achievements
+
+</h3>
+
+
+<p>
+
+This section can be updated with
+academic awards, certificates,
+seminars, training, competitions,
+and other accomplishments.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE PAGE
+===================================================== -->
+
+<section
+id="experience"
+class="page">
+
+
+<div class="container">
+
+
+<div class="page-title">
+
+
+<h1>
+
+My <span>Experience</span>
+
+</h1>
+
+
+<p>
+
+My skills, training, and
+experiences that contribute
+to my personal development.
+
+</p>
+
+
+</div>
+
+
+<div class="card-grid">
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-heart-pulse"></i>
+
+</div>
+
+
+<h3>
+
+Basic Life Support
+
+</h3>
+
+
+<p>
+
+I have experience related to
+Basic Life Support, providing
+me with knowledge of basic
+emergency response and life-saving
+procedures.
+
+</p>
+
+
+</div>
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-graduation-cap"></i>
+
+</div>
+
+
+<h3>
+
+Criminology Studies
+
+</h3>
+
+
+<p>
+
+As a criminology student,
+I continue to develop my
+understanding of crime,
+law enforcement, public safety,
+and criminal justice.
+
+</p>
+
+
+</div>
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-people-group"></i>
+
+</div>
+
+
+<h3>
+
+Teamwork
+
+</h3>
+
+
+<p>
+
+My participation in sports such
+as basketball and badminton
+has helped me develop teamwork,
+communication, and discipline.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     STUDY NOTES PAGE
+===================================================== -->
+
+<section
+id="notes"
+class="page">
+
+
+<div class="container">
+
+
+<div class="page-title">
+
+
+<h1>
+
+Study <span>Notes</span>
+
+</h1>
+
+
+<p>
+
+Create and organize your
+criminology study notes.
+
+Your notes are stored locally
+in your browser.
+
+</p>
+
+
+</div>
+
+
+<div class="notes-box">
+
+
+<h2>
+
+Add New Study Note
+
+</h2>
+
+
+<br>
+
+
+<div class="notes-form">
+
+
+<input
+type="text"
+id="noteTitle"
+placeholder="Enter note title">
+
+
+<select
+id="noteCategory">
+
+
+<option>
+Criminology
+</option>
+
+
+<option>
+Criminal Law
+</option>
+
+
+<option>
+Forensic Science
+</option>
+
+
+<option>
+Reviewer
+</option>
+
+
+<option>
+General
+</option>
+
+
+</select>
+
+
+<textarea
+id="noteContent"
+placeholder="Write your study notes here...">
+</textarea>
+
+
+<button
+class="btn primary"
+onclick="addNote()">
+
+
+<i class="fas fa-plus"></i>
+
+Save Note
+
+
+</button>
+
+
+</div>
+
+
+<div
+class="note-list"
+id="noteList">
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     DOCUMENTS PAGE
+===================================================== -->
+
+<section
+id="documents"
+class="page">
+
+
+<div class="container">
+
+
+<div class="page-title">
+
+
+<h1>
+
+Important <span>Documents</span>
+
+</h1>
+
+
+<p>
+
+Your personal space for
+important academic files
+and documents.
+
+</p>
+
+
+</div>
+
+
+<div class="card-grid">
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-file-pdf"></i>
+
+</div>
+
+
+<h3>
+
+Basic Life Support Certificate
+
+</h3>
+
+
+<p>
+
+Add your BLS certificate
+to this website.
+
+</p>
+
+
+<br>
+
+
+<input
+type="file"
+accept=".pdf,.doc,.docx"
+onchange="uploadDocument(event)">
+
+
+</div>
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-file-lines"></i>
+
+</div>
+
+
+<h3>
+
+Academic Documents
+
+</h3>
+
+
+<p>
+
+Upload reviewers,
+assignments, and other
+important academic files.
+
+</p>
+
+
+<br>
+
+
+<input
+type="file"
+accept=".pdf,.doc,.docx,.ppt,.pptx"
+onchange="uploadDocument(event)">
+
+
+</div>
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fas fa-folder-open"></i>
+
+</div>
+
+
+<h3>
+
+Personal Documents
+
+</h3>
+
+
+<p>
+
+Store documents such as
+your resume and certificates.
+
+</p>
+
+
+<br>
+
+
+<input
+type="file"
+accept=".pdf,.doc,.docx"
+onchange="uploadDocument(event)">
+
+
+</div>
+
+
+</div>
+
+
+<br>
+
+
+<div
+id="uploadedDocuments"
+class="card-grid">
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     SECRET CODE PAGE
+===================================================== -->
+
+<section
+id="secret"
+class="page">
+
+
+<div class="container">
+
+
+<div class="page-title">
+
+
+<h1>
+
+🔐 Secret <span>Vault</span>
+
+</h1>
+
+
+<p>
+
+Enter your secret code to
+access your private section.
+
+</p>
+
+
+</div>
+
+
+<div class="secret-box">
+
+
+<i
+class="fas fa-lock"
+style="font-size:60px;color:var(--primary)">
+</i>
+
+
+<h2>
+
+Private Access
+
+</h2>
+
+
+<p>
+
+This section is protected by
+a secret code.
+
+</p>
+
+
+<input
+type="password"
+id="secretCode"
+class="secret-input"
+placeholder="Enter secret code">
+
+
+<button
+class="btn primary"
+onclick="unlockSecret()">
+
+<i class="fas fa-key"></i>
+
+Unlock
+
+</button>
+
+
+<div
+id="secretContent"
+class="secret-content">
+
+
+<h2>
+
+🎉 Welcome to the Secret Area!
+
+</h2>
+
+
+<p>
+
+You have successfully unlocked
+the private section of your
+personal website.
+
+You can place private reminders,
+personal goals, or other content
+here.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT PAGE
+===================================================== -->
+
+<section
+id="contact"
+class="page">
+
+
+<div class="container">
+
+
+<div class="page-title">
+
+
+<h1>
+
+Contact <span>Me</span>
+
+</h1>
+
+
+<p>
+
+You can use this form to
+send a message.
+
+</p>
+
+
+</div>
+
+
+<form
+class="contact-form"
+onsubmit="sendMessage(event)">
+
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+
+<input
+type="email"
+placeholder="Your Email"
+required>
+
+
+<textarea
+placeholder="Your Message"
+required>
+</textarea>
+
+
+<button
+class="btn primary"
+type="submit">
+
+<i class="fas fa-paper-plane"></i>
+
+Send Message
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+<p>
+
+© 2026 Ramil Jay B. Matabye
+
+</p>
+
+
+<p>
+
+University of the Cordilleras |
+
+Bachelor of Science in Criminology
+
+</p>
+
+
+</footer>
+
+
+
+<script>
+
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
+
+function showPage(pageId) {
+
+
+    // Hide all pages
+
+    const pages =
+        document.querySelectorAll(".page");
+
+
+    pages.forEach(
+        page => {
+
+            page.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+    // Show selected page
+
+    const selectedPage =
+        document.getElementById(
+            pageId
+        );
+
+
+    if (selectedPage) {
+
+        selectedPage.classList.add(
+            "active"
+        );
+
+    }
+
+
+    // Close mobile menu
+
+    document
+        .getElementById(
+            "navLinks"
+        )
+        .classList.remove(
+            "active"
+        );
+
+
+    // Scroll to top
+
+    window.scrollTo(
+        0,
+        0
+    );
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMenu() {
+
+
+    document
+        .getElementById(
+            "navLinks"
+        )
+        .classList.toggle(
+            "active"
+        );
+
+
+}
+
+
+/* =====================================================
+   DARK / LIGHT MODE
+===================================================== */
+
+function toggleTheme() {
+
+
+    document.body
+        .classList.toggle(
+            "light"
+        );
+
+
+    const theme =
+
+        document.body
+        .classList
+        .contains("light")
+
+        ? "light"
+
+        : "dark";
+
+
+    localStorage.setItem(
+
+        "ramilTheme",
+
+        theme
+
+    );
+
+}
+
+
+/* LOAD THEME */
+
+window.addEventListener(
+
+    "DOMContentLoaded",
+
+    function() {
+
+
+        const savedTheme =
+
+            localStorage.getItem(
+
+                "ramilTheme"
+
+            );
+
+
+        if (
+            savedTheme ===
+            "light"
+        ) {
+
+
+            document.body
+                .classList
+                .add("light");
+
+
+        }
+
+
+        loadNotes();
+
+
+        loadDocuments();
+
+
+    }
+
+);
+
+
+
+/* =====================================================
+   STUDY NOTES SYSTEM
+===================================================== */
+
+function addNote() {
+
+
+    const title =
+
+        document
+        .getElementById(
+            "noteTitle"
+        )
+        .value
+        .trim();
+
+
+    const category =
+
+        document
+        .getElementById(
+            "noteCategory"
+        )
+        .value;
+
+
+    const content =
+
+        document
+        .getElementById(
+            "noteContent"
+        )
+        .value
+        .trim();
+
+
+    if (
+        title === "" ||
+        content === ""
+    ) {
+
+
+        alert(
+
+            "Please complete your note."
+
+        );
+
+
+        return;
+
+    }
+
+
+    const note = {
+
+
+        id:
+
+            Date.now(),
+
+
+        title:
+
+            title,
+
+
+        category:
+
+            category,
+
+
+        content:
+
+            content,
+
+
+        date:
+
+            new Date()
+            .toLocaleDateString()
+
+
+    };
+
+
+    let notes =
+
+
+        JSON.parse(
+
+            localStorage.getItem(
+
+                "ramilNotes"
+
+            )
+
+        ) || [];
+
+
+    notes.push(
+
+        note
+
+    );
+
+
+    localStorage.setItem(
+
+        "ramilNotes",
+
+        JSON.stringify(
+
+            notes
+
+        )
+
+    );
+
+
+    document
+        .getElementById(
+            "noteTitle"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "noteContent"
+        )
+        .value = "";
+
+
+    loadNotes();
+
+
+}
+
+
+/* LOAD NOTES */
+
+function loadNotes() {
+
+
+    const container =
+
+        document
+        .getElementById(
+            "noteList"
+        );
+
+
+    if (!container) {
+
+        return;
+
+    }
+
+
+    let notes =
+
+
+        JSON.parse(
+
+            localStorage.getItem(
+
+                "ramilNotes"
+
+            )
+
+        ) || [];
+
+
+    container.innerHTML = "";
+
+
+    if (
+        notes.length === 0
+    ) {
+
+
+        container.innerHTML = `
+
+        <div class="card">
+
+            <i class="fas fa-book card-icon"></i>
+
+            <h3>
+            No Notes Yet
+            </h3>
+
+            <p>
+            Add your first study note above.
+            </p>
+
+        </div>
+
+        `;
+
+
+        return;
+
+    }
+
+
+    notes.forEach(
+
+        note => {
+
+
+            container.innerHTML += `
+
+            <div class="note">
+
+                <h3>
+                ${escapeHTML(note.title)}
+                </h3>
+
+                <small>
+                ${escapeHTML(note.category)}
+                |
+                ${note.date}
+                </small>
+
+                <p>
+                ${escapeHTML(note.content)}
+                </p>
+
+                <br>
+
+                <button
+                class="btn primary"
+                onclick="deleteNote(${note.id})">
+
+                <i class="fas fa-trash"></i>
+
+                Delete
+
+                </button>
+
+            </div>
+
+            `;
+
+
+        }
+
+    );
+
+
+}
+
+
+/* DELETE NOTE */
+
+function deleteNote(id) {
+
+
+    let notes =
+
+
+        JSON.parse(
+
+            localStorage.getItem(
+
+                "ramilNotes"
+
+            )
+
+        ) || [];
+
+
+    notes =
+
+        notes.filter(
+
+            note =>
+
+                note.id !== id
+
+        );
+
+
+    localStorage.setItem(
+
+        "ramilNotes",
+
+        JSON.stringify(
+
+            notes
+
+        )
+
+    );
+
+
+    loadNotes();
+
+
+}
+
+
+/* HTML SECURITY */
+
+function escapeHTML(text) {
+
+
+    const div =
+
+        document.createElement(
+            "div"
+        );
+
+
+    div.textContent =
+
+        text;
+
+
+    return div.innerHTML;
+
+
+}
+
+
+/* =====================================================
+   SECRET CODE
+===================================================== */
+
+function unlockSecret() {
+
+
+    const code =
+
+        document
+        .getElementById(
+            "secretCode"
+        )
+        .value;
+
+
+    /*
+       CHANGE YOUR SECRET CODE HERE
+
+       CURRENT CODE:
+
+       RJM2026
+    */
+
+
+    const secretPassword =
+
+        "RJM2026";
+
+
+    if (
+        code ===
+        secretPassword
+    ) {
+
+
+        document
+            .getElementById(
+                "secretContent"
+            )
+            .classList
+            .add("show");
+
+
+        alert(
+
+            "Access Granted!"
+
+        );
+
+
+    }
+
+    else {
+
+
+        alert(
+
+            "Incorrect secret code!"
+
+        );
+
+
+    }
+
+
+}
+
+
+/* =====================================================
+   DOCUMENT UPLOAD
+===================================================== */
+
+function uploadDocument(event) {
+
+
+    const file =
+
+        event
+        .target
+        .files[0];
+
+
+    if (!file) {
+
+        return;
+
+    }
+
+
+    let documents =
+
+
+        JSON.parse(
+
+            localStorage.getItem(
+
+                "ramilDocuments"
+
+            )
+
+        ) || [];
+
+
+    documents.push(
+
+        {
+
+            name:
+
+                file.name,
+
+
+            size:
+
+                (
+
+                    file.size /
+                    1024
+
+                ).toFixed(2)
+
+                + " KB"
+
+
+        }
+
+    );
+
+
+    localStorage.setItem(
+
+        "ramilDocuments",
+
+        JSON.stringify(
+
+            documents
+
+        )
+
+    );
+
+
+    loadDocuments();
+
+
+    alert(
+
+        "Document added to your list!"
+
+    );
+
+
+}
+
+
+/* LOAD DOCUMENTS */
+
+function loadDocuments() {
+
+
+    const container =
+
+        document
+        .getElementById(
+            "uploadedDocuments"
+        );
+
+
+    if (!container) {
+
+        return;
+
+    }
+
+
+    let documents =
+
+
+        JSON.parse(
+
+            localStorage.getItem(
+
+                "ramilDocuments"
+
+            )
+
+        ) || [];
+
+
+    container.innerHTML = "";
+
+
+    documents.forEach(
+
+        (document,index) => {
+
+
+            container.innerHTML += `
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                <i class="fas fa-file"></i>
+
+                </div>
+
+                <h3>
+
+                ${escapeHTML(document.name)}
+
+                </h3>
+
+                <p>
+
+                ${document.size}
+
+                </p>
+
+                <br>
+
+                <button
+                class="btn primary"
+                onclick="deleteDocument(${index})">
+
+                Delete
+
+                </button>
+
+            </div>
+
+            `;
+
+
+        }
+
+    );
+
+
+}
+
+
+/* DELETE DOCUMENT */
+
+function deleteDocument(index) {
+
+
+    let documents =
+
+
+        JSON.parse(
+
+            localStorage.getItem(
+
+                "ramilDocuments"
+
+            )
+
+        ) || [];
+
+
+    documents.splice(
+
+        index,
+
+        1
+
+    );
+
+
+    localStorage.setItem(
+
+        "ramilDocuments",
+
+        JSON.stringify(
+
+            documents
+
+        )
+
+    );
+
+
+    loadDocuments();
+
+
+}
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+function sendMessage(event) {
+
+
+    event.preventDefault();
+
+
+    alert(
+
+        "Thank you for your message, Ramil!"
+
+    );
+
+
+    event
+        .target
+        .reset();
+
+
+}
+
+
+/* =====================================================
+   KEYBOARD SHORTCUT
+===================================================== */
+
+/*
+
+Press CTRL + SHIFT + S
+
+to open the Secret Vault.
+
+*/
+
+
+document.addEventListener(
+
+    "keydown",
+
+    function(event) {
+
+
+        if (
+
+            event.ctrlKey &&
+
+            event.shiftKey &&
+
+            event.key.toLowerCase()
+
+            === "s"
+
+        ) {
+
+
+            showPage(
+
+                "secret"
+
+            );
+
+
+        }
+
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>
+```
